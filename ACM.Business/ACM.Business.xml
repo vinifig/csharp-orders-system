@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ACM.Business</name>
+    </assembly>
+    <members>
+        <member name="T:ACM.Business.Address">
+            <summary>
+            Address Entity
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Address.AddressId">
+            <summary>
+            Address Id
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Address.Street">
+            <summary>
+            Address Street
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Address.Retrieve(System.Int64)">
+            <summary>
+            Address Entity Retrieve Method
+            </summary>
+            <param name="entityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Address.Retrieve">
+            <summary>
+            Address Collection Entity Retrieve Method
+            Not Implemented
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Address.Save">
+            <summary>
+            Address Entity Save Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Address.Validate">
+            <summary>
+            Implementation of IValidatable.Validate()
+            </summary>
+            <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="T:ACM.Business.Customer">
+            <summary>
+            Customer's Entity Class
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Customer.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Customer's Entity constructor
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Customer.CustomerId">
+            <summary>
+            Customer's System ID
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Customer.LastName">
+            <summary>
+            Customer's Last Name Property
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Customer.FirstName">
+            <summary>
+            Customer's First Name Property
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Customer.EmailAddress">
+            <summary>
+            Customer's Email Property
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Customer.WorkAddress">
+            <summary>
+            Customer's Work Address
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Customer.HomeAddress">
+            <summary>
+            Customer's Home Address
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Customer.FullName">
+            <summary>
+            Customer's Full Name Getter
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Customer.Retrieve(System.Int64)">
+            <summary>
+            Method to Retrieve a customer's entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Customer.Retrieve">
+            <summary>
+            Method to Retrieve all customer's entities
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Customer.Save">
+            <summary>
+            Customer's Entity Save Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Customer.Validate">
+            <summary>
+            Customer Instance Validator
+            </summary>
+            <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="T:ACM.Business.IRetrievable`1">
+            <summary>
+            Typed Retrievable Class Interface
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ACM.Business.IRetrievable`1.Retrieve(System.Int64)">
+            <summary>
+            Method to Retrieve a entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.IRetrievable`1.Retrieve">
+            <summary>
+            Method to Retrieve all entities
+            </summary>
+        </member>
+        <member name="T:ACM.Business.IRetrievable">
+            <summary>
+            Retrievable Class Interface
+            </summary>
+        </member>
+        <member name="T:ACM.Business.ISavable`1">
+            <summary>
+            Typed Savable classes interface 
+            </summary>
+        </member>
+        <member name="M:ACM.Business.ISavable`1.Save">
+            <summary>
+            Instance's Save method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ACM.Business.ISavable">
+            <summary>
+            Savable classes interface 
+            </summary>
+        </member>
+        <member name="T:ACM.Business.IValidatable">
+            <summary>
+            Validatable Interface
+            </summary>
+        </member>
+        <member name="M:ACM.Business.IValidatable.Validate">
+            <summary>
+            Method to validate the object instance
+            </summary>
+            <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+            <returns cref="T:System.Boolean"></returns>
+        </member>
+        <member name="T:ACM.Business.Order">
+            <summary>
+            Order's Entity class
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Order.CurrentPrice">
+            <summary>
+            Order's Current Price
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Order.OrderId">
+            <summary>
+            Order Id
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Order.Customer">
+            <summary>
+            Order's customer
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Order.ShippingAddress">
+            <summary>
+            Order's Shipping Address
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Order.Items">
+            <summary>
+            Order Items
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Order.Details">
+            <summary>
+            Order Description
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Order.Date">
+            <summary>
+            Last Order's Update DateTime
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Order.Retrieve(System.Int64)">
+            <summary>
+            Implementation of IRetrievable.Retrieve(long entityId)
+            </summary>
+            <param name="entityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Order.Retrieve">
+            <summary>
+            Implementation of IRetrievable.Retrieve()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Order.Save">
+            <summary>
+            Order's Entity Save Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Order.Validate">
+            <summary>
+            Implementation of IValidatable.Validate()
+            </summary>
+            <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="T:ACM.Business.OrderItem">
+            <summary>
+            OrderItem's Entity Class
+            </summary>
+        </member>
+        <member name="P:ACM.Business.OrderItem.ItemId">
+            <summary>
+            OrderItem Id
+            </summary>
+        </member>
+        <member name="P:ACM.Business.OrderItem.Product">
+            <summary>
+            Order's Item Product
+            </summary>
+        </member>
+        <member name="P:ACM.Business.OrderItem.ItemProductPrice">
+            <summary>
+            Price of order's product 
+            </summary>
+        </member>
+        <member name="P:ACM.Business.OrderItem.Quantity">
+            <summary>
+            Order Item Product's Quantity
+            </summary>
+        </member>
+        <member name="P:ACM.Business.OrderItem.SubTotal">
+            <summary>
+            SubTotal Item Price
+            </summary>
+        </member>
+        <member name="M:ACM.Business.OrderItem.Retrieve(System.Int64)">
+            <summary>
+            Implementation of IRetrievable.Retrieve(long entityId)
+            </summary>
+            <param name="orderItemId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.OrderItem.Retrieve">
+            <summary>
+            Implementation of IRetrievable.Retrieve()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.OrderItem.Save">
+            <summary>
+            Product's Instance Save method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.OrderItem.Validate">
+            <summary>
+            Implementation of IValidatable.Validate()
+            </summary>
+            <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="T:ACM.Business.Product">
+            <summary>
+            Product's Entity class
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Product.CurrentPrice">
+            <summary>
+            Product's Current Price
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Product.ProductId">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Product.ProductDescription">
+            <summary>
+            Product Description
+            </summary>
+        </member>
+        <member name="P:ACM.Business.Product.ProductName">
+            <summary>
+            Product Name
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Product.Retrieve(System.Int64)">
+            <summary>
+            Implementation of IRetrievable.Retrieve(long entityId)
+            </summary>
+            <param name="entityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Product.Retrieve">
+            <summary>
+            Implementation of IRetrievable.Retrieve()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Product.Save">
+            <summary>
+            Product's Instance Save method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Product.Validate">
+            <summary>
+            Implementation of IValidatable.Validate()
+            </summary>
+            <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+    </members>
+</doc>

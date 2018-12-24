@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ACM.BusinessTest</name>
+    </assembly>
+    <members>
+        <member name="T:ACM.BusinessTest.AddressTest">
+            <summary>
+            ACM.Business.Address Test Class
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.AddressTest.Address_ValidateMethod_IsImplemented">
+            <summary>
+            Verifies if Address Validate method is implemented
+            </summary>
+        </member>
+        <member name="T:ACM.BusinessTest.CustomerTest">
+            <summary>
+            ACM.Business.Customer Test Class
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.CustomerTest.FullName_Value_IsValid">
+            <summary>
+            Verifies if Customer FullName is Valid
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.CustomerTest.FirstName_Change_UpdatesValidFullName(System.String,System.String,System.String)">
+            <summary>
+            Verifies if full name will correctly change when updates first name
+            </summary>
+            <param name="firstName">Initial First Name</param>
+            <param name="lastName">Last Name</param>
+            <param name="newFirstName">New Last Name</param>
+        </member>
+        <member name="M:ACM.BusinessTest.CustomerTest.Validate_InvalidData_GeneratesExceptions(System.String,System.String,System.String)">
+            <summary>
+            Verifies if full name will correctly change when updates first name
+            </summary>
+            <param name="firstName">Customer's First Name</param>
+            <param name="lastName">Customer's Last Name</param>
+            <param name="email">Customer's Email</param>
+        </member>
+        <member name="M:ACM.BusinessTest.CustomerTest.Validate_InvalidEmail_ThrowValidationException">
+            <summary>
+            Verifies if Customer Validation throws ValidationException when sets a invalid email 
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.CustomerTest.Customer_ValidateMethod_IsImplemented">
+            <summary>
+            Verifies if Customer Validate method is implemented
+            </summary>
+        </member>
+        <member name="T:ACM.BusinessTest.OrderItemTest">
+            <summary>
+            ACM.Business.OrderItem Test Class
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.OrderItemTest.OrderItem_ValidateMethod_IsImplemented">
+            <summary>
+            Verifies if OrderItem Validate method is implemented
+            </summary>
+        </member>
+        <member name="T:ACM.BusinessTest.OrderTest">
+            <summary>
+            ACM.Business.Order Test Class
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.OrderTest.Order_ValidateMethod_IsImplemented">
+            <summary>
+            Verifies if Order Validate method is implemented
+            </summary>
+        </member>
+        <member name="T:ACM.BusinessTest.ProductTest">
+            <summary>
+            ACM.Business.Product Test Class
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.ProductTest.Product_ValidateMethod_IsImplemented">
+            <summary>
+            Verifies if Product Validate method is implemented
+            </summary>
+        </member>
+    </members>
+</doc>
