@@ -10,7 +10,13 @@ namespace ACM.Business
     /// </summary>
     public class Address : IValidatable
     {
+        /// <summary>
+        /// Address Entity's constructor
+        /// </summary>
+        public Address()
+        {
 
+        }
 
         #region Properties
 
