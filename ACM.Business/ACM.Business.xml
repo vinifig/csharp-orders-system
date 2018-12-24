@@ -9,6 +9,11 @@
             Address Entity
             </summary>
         </member>
+        <member name="M:ACM.Business.Address.#ctor">
+            <summary>
+            Address Entity's constructor
+            </summary>
+        </member>
         <member name="P:ACM.Business.Address.AddressId">
             <summary>
             Address Id
@@ -48,6 +53,11 @@
         <member name="T:ACM.Business.Customer">
             <summary>
             Customer's Entity Class
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Customer.#ctor">
+            <summary>
+            Customer's Entity constructor
             </summary>
         </member>
         <member name="M:ACM.Business.Customer.#ctor(System.String,System.String,System.String)">
@@ -127,7 +137,7 @@
             Typed Savable classes interface 
             </summary>
         </member>
-        <member name="M:ACM.Business.ISavable`1.Save">
+        <member name="M:ACM.Business.ISavable`1.Save(`0)">
             <summary>
             Instance's Save method
             </summary>
@@ -283,7 +293,7 @@
             Method to Retrieve all customer's entities
             </summary>
         </member>
-        <member name="M:ACM.Business.Repository.CustomerRepository.Save">
+        <member name="M:ACM.Business.Repository.CustomerRepository.Save(ACM.Business.Customer)">
             <summary>
             Customer's Entity Save Method
             </summary>
@@ -304,7 +314,7 @@
             Method to Retrieve all Order's entities
             </summary>
         </member>
-        <member name="M:ACM.Business.Repository.OrderRepository.Save">
+        <member name="M:ACM.Business.Repository.OrderRepository.Save(ACM.Business.Order)">
             <summary>
             Order's Entity Save Method
             </summary>
@@ -317,17 +327,17 @@
         </member>
         <member name="M:ACM.Business.Repository.ProductRepository.Retrieve(System.Int64)">
             <summary>
-            Method to Retrieve a Product's entity
+            Method to Retrieve a Order's entity
             </summary>
         </member>
         <member name="M:ACM.Business.Repository.ProductRepository.Retrieve">
             <summary>
-            Method to Retrieve all Product's entities
+            Method to Retrieve all Order's entities
             </summary>
         </member>
-        <member name="M:ACM.Business.Repository.ProductRepository.Save">
+        <member name="M:ACM.Business.Repository.ProductRepository.Save(ACM.Business.Product)">
             <summary>
-            Product's Entity Save Method
+            Order's Entity Save Method
             </summary>
             <returns></returns>
         </member>

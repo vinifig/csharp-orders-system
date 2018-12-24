@@ -48,7 +48,9 @@ namespace ACM.BusinessTest
             // Arrange
             OrderItem orderItem = new OrderItem()
             {
-                Product = new Product()
+                Product = new Product(),
+                ItemProductPrice = price,
+                Quantity = quantity
             };
 
             // Act

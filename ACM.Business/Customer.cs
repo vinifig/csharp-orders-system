@@ -16,6 +16,13 @@ namespace ACM.Business
         /// <summary>
         /// Customer's Entity constructor
         /// </summary>
+        public Customer()
+        {
+        }
+
+        /// <summary>
+        /// Customer's Entity constructor
+        /// </summary>
         public Customer(string firstName, string lastName, [EmailAddress] string email)
         {
             FirstName = firstName;

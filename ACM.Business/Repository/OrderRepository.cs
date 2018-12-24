@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using ACM.Business;
 
 namespace ACM.Business.Repository
@@ -18,17 +19,23 @@ namespace ACM.Business.Repository
         /// <summary>
         /// Method to Retrieve a Order's entity
         /// </summary>
-        public Order Retrieve(long entityId)
+        public async Task<Order> Retrieve(long entityId)
         {
-            throw new NotImplementedException();
+            Order order = new Order();
+            return await Task.FromResult(order);
         }
 
         /// <summary>
         /// Method to Retrieve all Order's entities
         /// </summary>
-        public IEnumerable<Order> Retrieve()
+        public async Task<IEnumerable<Order>> Retrieve()
         {
-            throw new NotImplementedException();
+            // Mocking Data - in the future implements the query here
+            IEnumerable<Order> orders = new List<Order>()
+            {
+                await Retrieve(1)
+            };
+            return orders;
         }
 
         #endregion
@@ -39,9 +46,9 @@ namespace ACM.Business.Repository
         /// Order's Entity Save Method
         /// </summary>
         /// <returns></returns>
-        public Order Save()
+        public async Task<Order> Save(Order order)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(order);
         }
 
         #endregion

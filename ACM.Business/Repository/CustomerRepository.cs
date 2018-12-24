@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using ACM.Business;
 
 namespace ACM.Business.Repository
@@ -18,17 +19,24 @@ namespace ACM.Business.Repository
         /// <summary>
         /// Method to Retrieve a customer's entity
         /// </summary>
-        public Customer Retrieve(long entityId)
+        public async Task<Customer> Retrieve(long entityId)
         {
-            throw new NotImplementedException();
+            // Mocking Data - in the future implements the query here
+            Customer customer = new Customer();
+            return await Task.FromResult(customer);
         }
 
         /// <summary>
         /// Method to Retrieve all customer's entities
         /// </summary>
-        public IEnumerable<Customer> Retrieve()
+        public async Task<IEnumerable<Customer>> Retrieve()
         {
-            throw new NotImplementedException();
+            // Mocking Data - in the future implements the query here
+            IEnumerable<Customer> customers = new List<Customer>()
+            {
+                await Retrieve(1)
+            };
+            return customers;
         }
 
         #endregion
@@ -39,9 +47,9 @@ namespace ACM.Business.Repository
         /// Customer's Entity Save Method
         /// </summary>
         /// <returns></returns>
-        public Customer Save()
+        public async Task<Customer> Save(Customer customer)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(customer);
         }
 
         #endregion

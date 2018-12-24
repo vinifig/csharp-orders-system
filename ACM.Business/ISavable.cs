@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ACM.Business
 {
@@ -13,7 +14,7 @@ namespace ACM.Business
         /// Instance's Save method
         /// </summary>
         /// <returns></returns>
-        T Save();
+        Task<T> Save(T entity);
     }
 
     /// <summary>

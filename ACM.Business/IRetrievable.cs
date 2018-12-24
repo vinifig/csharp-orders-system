@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ACM.Business
 {
@@ -11,12 +12,12 @@ namespace ACM.Business
         /// <summary>
         /// Method to Retrieve a entity
         /// </summary>
-        T Retrieve(long entityId);
+        Task<T> Retrieve(long entityId);
 
         /// <summary>
         /// Method to Retrieve all entities
         /// </summary>
-        IEnumerable<T> Retrieve();
+        Task<IEnumerable<T>> Retrieve();
     }
 
     /// <summary>
