@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ACM.Business.Errors
+namespace ACM.Business.Validation
 {
     /// <summary>
     /// Exception throwed when a repository is not available

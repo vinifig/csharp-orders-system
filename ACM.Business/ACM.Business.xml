@@ -617,12 +617,12 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:ACM.Business.Errors.UnavailableRepositoryException">
+        <member name="T:ACM.Business.Validation.UnavailableRepositoryException">
             <summary>
             Exception throwed when a repository is not available
             </summary>
         </member>
-        <member name="M:ACM.Business.Errors.UnavailableRepositoryException.#ctor(System.Type)">
+        <member name="M:ACM.Business.Validation.UnavailableRepositoryException.#ctor(System.Type)">
             <summary>
             UnavailableRepositoryException constructor
             </summary>
