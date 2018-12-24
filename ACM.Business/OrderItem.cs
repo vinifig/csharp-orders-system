@@ -8,7 +8,7 @@ namespace ACM.Business
     /// <summary>
     /// OrderItem's Entity Class
     /// </summary>
-    public class OrderItem: ISavable<OrderItem>, IRetrievable<OrderItem>, IValidatable
+    public class OrderItem : IValidatable
     {
 
         #region Properties
@@ -27,13 +27,13 @@ namespace ACM.Business
         /// <summary>
         /// Price of order's product 
         /// </summary>
-        [Required]
+        [Range(0.01, double.MaxValue)]
         public double ItemProductPrice { get; set; }
 
         /// <summary>
         /// Order Item Product's Quantity
         /// </summary>
-        [Required]
+        [Range(0.01, double.MaxValue)]
         public double Quantity { get; set; }
 
         /// <summary>
@@ -44,41 +44,6 @@ namespace ACM.Business
         #endregion
 
         #region Interfaces
-
-        #region IRetrievable
-        /// <summary>
-        /// Implementation of IRetrievable.Retrieve(long entityId)
-        /// </summary>
-        /// <param name="orderItemId"></param>
-        /// <returns></returns>
-        public OrderItem Retrieve(long orderItemId)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Implementation of IRetrievable.Retrieve()
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<OrderItem> Retrieve()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
-        #region ISavable
-
-        /// <summary>
-        /// Product's Instance Save method
-        /// </summary>
-        /// <returns></returns>
-        public OrderItem Save()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
 
         #region IValidatable
 

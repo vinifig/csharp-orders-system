@@ -8,8 +8,18 @@ namespace ACM.Business
     /// <summary>
     /// Order's Entity class
     /// </summary>
-    public class Order : IRetrievable<Order>, IValidatable, ISavable<Order>
+    public class Order : IValidatable
     {
+        #region Order Constructor
+        /// <summary>
+        /// Order Initializer
+        /// </summary>
+        public Order()
+        {
+            Items = new List<OrderItem>();
+        }
+
+        #endregion
 
         #region Properties
 
@@ -42,7 +52,6 @@ namespace ACM.Business
         /// <summary>
         /// Order Description
         /// </summary>
-        [Required]
         public string Details { get; set; }
 
         /// <summary>
@@ -53,41 +62,6 @@ namespace ACM.Business
         #endregion
 
         #region Interfaces
-
-        #region IRetrievable
-        /// <summary>
-        /// Implementation of IRetrievable.Retrieve(long entityId)
-        /// </summary>
-        /// <param name="entityId"></param>
-        /// <returns></returns>
-        public Order Retrieve(long entityId)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Implementation of IRetrievable.Retrieve()
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<Order> Retrieve()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
-        #region ISavable
-
-        /// <summary>
-        /// Order's Entity Save Method
-        /// </summary>
-        /// <returns></returns>
-        public Order Save()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
 
         #region IValidatable
 

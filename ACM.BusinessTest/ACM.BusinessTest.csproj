@@ -20,4 +20,8 @@
     <ProjectReference Include="..\ACM.Business\ACM.Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="RepositoryTest\" />
+  </ItemGroup>
+
 </Project>

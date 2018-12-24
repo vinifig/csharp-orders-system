@@ -29,5 +29,33 @@ namespace ACM.BusinessTest
             Assert.NotEqual(expected, actual);
         }
 
+
+        /// <summary>
+        /// Verifies if invalid data throws ValidationErrors
+        /// </summary>
+        /// <param name="price"></param>
+        /// <param name="quantity"></param>
+        [Theory]
+        #region Range
+        [InlineData(0, 0.01)]
+        [InlineData(-1, 0.01)]
+        [InlineData(0.01, 0)]
+        [InlineData(0.01, -1)]
+        [InlineData(-1, -1)]
+        #endregion
+        public void OrderItem_InvalidProperties_ThrowsValidationExceptions(double price, double quantity)
+        {
+            // Arrange
+            OrderItem orderItem = new OrderItem()
+            {
+                Product = new Product()
+            };
+
+            // Act
+
+            // Assert
+            Assert.Throws<ValidationException>(() => orderItem.Validate());
+        }
+
     }
 }

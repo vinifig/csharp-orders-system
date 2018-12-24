@@ -3,12 +3,12 @@
   <Class Name="ACM.Business.Customer">
     <Position X="3" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAMAAAACAAIAAAAAAAAAAAAAAABAAAQAAAgAAAAg=</HashCode>
+      <HashCode>AIAAAEAAAACAAIAAAAAAAAAAAAAAABAAAQAAAgAAAAg=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="HomeAddress" />
       <Property Name="WorkAddress" />
+      <Property Name="HomeAddress" />
     </ShowAsAssociation>
     <Lollipop Position="0.122" />
   </Class>
@@ -27,8 +27,8 @@
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="ShippingAddress" />
       <Property Name="Customer" />
+      <Property Name="ShippingAddress" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Items" />
@@ -36,9 +36,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ACM.Business.Address">
-    <Position X="6.25" Y="1" Width="1.5" />
+    <Position X="6.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>QIAAAIAAAACAAAAIAAAAAAAAAAIAAAABAAIABAAAAAA=</HashCode>
       <FileName>Address.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -52,6 +52,30 @@
     <ShowAsAssociation>
       <Property Name="Product" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ACM.Business.Repository.CustomerRepository" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\CustomerRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ACM.Business.Repository.OrderRepository" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\OrderRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ACM.Business.Repository.ProductRepository" BaseTypeListCollapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\ProductRepository.cs</FileName>
+    </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="ACM.Business.IValidatable">
@@ -87,6 +111,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IRetrievable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ACM.Business.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

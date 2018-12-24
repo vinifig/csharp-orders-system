@@ -16,28 +16,28 @@
         </member>
         <member name="P:ACM.Business.Address.Street">
             <summary>
-            Address Street
+            Address City's Street
             </summary>
         </member>
-        <member name="M:ACM.Business.Address.Retrieve(System.Int64)">
+        <member name="P:ACM.Business.Address.City">
             <summary>
-            Address Entity Retrieve Method
+            Address State's City
             </summary>
-            <param name="entityId"></param>
-            <returns></returns>
         </member>
-        <member name="M:ACM.Business.Address.Retrieve">
+        <member name="P:ACM.Business.Address.State">
             <summary>
-            Address Collection Entity Retrieve Method
-            Not Implemented
+            Address Country's State
             </summary>
-            <returns></returns>
         </member>
-        <member name="M:ACM.Business.Address.Save">
+        <member name="P:ACM.Business.Address.ZipCode">
             <summary>
-            Address Entity Save Method
+            Address Zip Code
             </summary>
-            <returns></returns>
+        </member>
+        <member name="P:ACM.Business.Address.Country">
+            <summary>
+            Address Country
+            </summary>
         </member>
         <member name="M:ACM.Business.Address.Validate">
             <summary>
@@ -90,27 +90,16 @@
             Customer's Full Name Getter
             </summary>
         </member>
-        <member name="M:ACM.Business.Customer.Retrieve(System.Int64)">
-            <summary>
-            Method to Retrieve a customer's entity
-            </summary>
-        </member>
-        <member name="M:ACM.Business.Customer.Retrieve">
-            <summary>
-            Method to Retrieve all customer's entities
-            </summary>
-        </member>
-        <member name="M:ACM.Business.Customer.Save">
-            <summary>
-            Customer's Entity Save Method
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:ACM.Business.Customer.Validate">
             <summary>
             Customer Instance Validator
             </summary>
             <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="T:ACM.Business.IRepository`1">
+            <summary>
+            Typed Entity Repository
+            </summary>
         </member>
         <member name="T:ACM.Business.IRetrievable`1">
             <summary>
@@ -166,6 +155,11 @@
             Order's Entity class
             </summary>
         </member>
+        <member name="M:ACM.Business.Order.#ctor">
+            <summary>
+            Order Initializer
+            </summary>
+        </member>
         <member name="P:ACM.Business.Order.CurrentPrice">
             <summary>
             Order's Current Price
@@ -200,25 +194,6 @@
             <summary>
             Last Order's Update DateTime
             </summary>
-        </member>
-        <member name="M:ACM.Business.Order.Retrieve(System.Int64)">
-            <summary>
-            Implementation of IRetrievable.Retrieve(long entityId)
-            </summary>
-            <param name="entityId"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ACM.Business.Order.Retrieve">
-            <summary>
-            Implementation of IRetrievable.Retrieve()
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ACM.Business.Order.Save">
-            <summary>
-            Order's Entity Save Method
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:ACM.Business.Order.Validate">
             <summary>
@@ -256,25 +231,6 @@
             SubTotal Item Price
             </summary>
         </member>
-        <member name="M:ACM.Business.OrderItem.Retrieve(System.Int64)">
-            <summary>
-            Implementation of IRetrievable.Retrieve(long entityId)
-            </summary>
-            <param name="orderItemId"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ACM.Business.OrderItem.Retrieve">
-            <summary>
-            Implementation of IRetrievable.Retrieve()
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ACM.Business.OrderItem.Save">
-            <summary>
-            Product's Instance Save method
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:ACM.Business.OrderItem.Validate">
             <summary>
             Implementation of IValidatable.Validate()
@@ -296,40 +252,84 @@
             Product Id
             </summary>
         </member>
-        <member name="P:ACM.Business.Product.ProductDescription">
+        <member name="P:ACM.Business.Product.Description">
             <summary>
             Product Description
             </summary>
         </member>
-        <member name="P:ACM.Business.Product.ProductName">
+        <member name="P:ACM.Business.Product.Name">
             <summary>
             Product Name
             </summary>
-        </member>
-        <member name="M:ACM.Business.Product.Retrieve(System.Int64)">
-            <summary>
-            Implementation of IRetrievable.Retrieve(long entityId)
-            </summary>
-            <param name="entityId"></param>
-            <returns></returns>
-        </member>
-        <member name="M:ACM.Business.Product.Retrieve">
-            <summary>
-            Implementation of IRetrievable.Retrieve()
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:ACM.Business.Product.Save">
-            <summary>
-            Product's Instance Save method
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:ACM.Business.Product.Validate">
             <summary>
             Implementation of IValidatable.Validate()
             </summary>
             <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="T:ACM.Business.Repository.CustomerRepository">
+            <summary>
+            Customer Data Manager
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.CustomerRepository.Retrieve(System.Int64)">
+            <summary>
+            Method to Retrieve a customer's entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.CustomerRepository.Retrieve">
+            <summary>
+            Method to Retrieve all customer's entities
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.CustomerRepository.Save">
+            <summary>
+            Customer's Entity Save Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ACM.Business.Repository.OrderRepository">
+            <summary>
+            Order Data Manager
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.OrderRepository.Retrieve(System.Int64)">
+            <summary>
+            Method to Retrieve a Order's entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.OrderRepository.Retrieve">
+            <summary>
+            Method to Retrieve all Order's entities
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.OrderRepository.Save">
+            <summary>
+            Order's Entity Save Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ACM.Business.Repository.ProductRepository">
+            <summary>
+            Product Data Manager
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.ProductRepository.Retrieve(System.Int64)">
+            <summary>
+            Method to Retrieve a Product's entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.ProductRepository.Retrieve">
+            <summary>
+            Method to Retrieve all Product's entities
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.ProductRepository.Save">
+            <summary>
+            Product's Entity Save Method
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>

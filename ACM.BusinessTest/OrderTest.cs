@@ -2,6 +2,8 @@
 using Xunit;
 using ACM.Business;
 using System.ComponentModel.DataAnnotations;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ACM.BusinessTest
 {
@@ -24,6 +26,23 @@ namespace ACM.BusinessTest
             // Act
             Exception e = Record.Exception(() => Order.Validate());
             Type actual = e?.GetType();
+
+            // Assert
+            Assert.NotEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// Verifies if Order Items's Property is not null when initialized
+        /// </summary>
+        [Fact]
+        public void Order_Initialize_ItemsShouldNotBeNull()
+        {
+            // Arrange
+            Order order = new Order();
+            IEnumerable<OrderItem> expected = null;
+            IEnumerable<OrderItem> actual = order.Items;
+
+            // Act
 
             // Assert
             Assert.NotEqual(expected, actual);

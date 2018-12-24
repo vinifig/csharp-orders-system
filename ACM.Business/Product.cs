@@ -8,7 +8,7 @@ namespace ACM.Business
     /// <summary>
     /// Product's Entity class
     /// </summary>
-    public class Product : ISavable<Product>, IRetrievable<Product>, IValidatable
+    public class Product : IValidatable
     {
 
         #region Properties
@@ -27,52 +27,19 @@ namespace ACM.Business
         /// Product Description
         /// </summary>
         [Required]
-        public string ProductDescription { get; set; }
+        [StringLength(int.MaxValue, MinimumLength = 1)]
+        public string Description { get; set; }
 
         /// <summary>
         /// Product Name
         /// </summary>
         [Required]
-        public string ProductName { get; set; }
+        [StringLength(int.MaxValue, MinimumLength = 1)]
+        public string Name { get; set; }
 
         #endregion
 
         #region Interfaces
-
-        #region IRetrievable
-        /// <summary>
-        /// Implementation of IRetrievable.Retrieve(long entityId)
-        /// </summary>
-        /// <param name="entityId"></param>
-        /// <returns></returns>
-        public Product Retrieve(long entityId)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Implementation of IRetrievable.Retrieve()
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<Product> Retrieve()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
-        #region ISavable
-
-        /// <summary>
-        /// Product's Instance Save method
-        /// </summary>
-        /// <returns></returns>
-        public Product Save()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
 
         #region IValidatable
 
