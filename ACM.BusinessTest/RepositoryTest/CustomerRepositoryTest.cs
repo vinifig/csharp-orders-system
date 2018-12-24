@@ -39,11 +39,11 @@ namespace ACM.BusinessTest.RepositoryTest
         /// Verifies if Customer FullName is Valid
         /// </summary>
         [Fact]
-        public async Task Retrieve_Mocked_ReturnAtLeastOneAddress()
+        public async Task RetrieveWithAddress_Mocked_ReturnAtLeastOneAddress()
         {
             // Arrange
             ICustomerRepository customerRepository = new CustomerRepository(new AddressRepository());
-            Customer customer = await customerRepository.Retrieve(1);
+            Customer customer = await customerRepository.RetrieveWithAddresses(1);
             int expected = 1;
             int actual = customer.AddressList.Count;
 

@@ -17,5 +17,12 @@ namespace ACM.Business.Repository
         /// <param name="customerId"></param>
         /// <returns></returns>
         Task<IEnumerable<Address>> RetrieveByCustomerId(long customerId);
+
+        /// <summary>
+        /// Retrieve order shipping address
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
+        Task<Address> RetrieveByOrderId(long orderId);
     }
 }

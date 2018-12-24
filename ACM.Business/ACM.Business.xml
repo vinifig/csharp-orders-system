@@ -178,16 +178,6 @@
             Professors and Education related customers 
             </summary>
         </member>
-        <member name="T:ACM.Business.Errors.UnavailableRepositoryException">
-            <summary>
-            Exception throwed when a repository is not available
-            </summary>
-        </member>
-        <member name="M:ACM.Business.Errors.UnavailableRepositoryException.#ctor(System.Type)">
-            <summary>
-            UnavailableRepositoryException constructor
-            </summary>
-        </member>
         <member name="T:ACM.Business.IRepository`1">
             <summary>
             Typed Entity Repository
@@ -437,6 +427,13 @@
             <param name="customerId"></param>
             <returns></returns>
         </member>
+        <member name="M:ACM.Business.Repository.AddressRepository.RetrieveByOrderId(System.Int64)">
+            <summary>
+            Retrieves order's shipping address
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.Repository.CustomerRepository">
             <summary>
             Customer Data Manager
@@ -453,6 +450,17 @@
             Retrieve all addresses of a customer
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Repository.CustomerRepository.RetrieveWithAddresses(System.Int64)">
+            <summary>
+            Method to Retrieve a customer's entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.CustomerRepository.RetrieveCustomerByOrderId(System.Int64)">
+            <summary>
+            Retrieves the order's customer 
+            </summary>
+            <param name="orderId"></param>
         </member>
         <member name="M:ACM.Business.Repository.CustomerRepository.Retrieve(System.Int64)">
             <summary>
@@ -483,6 +491,13 @@
             <param name="customerId"></param>
             <returns></returns>
         </member>
+        <member name="M:ACM.Business.Repository.IAddressRepository.RetrieveByOrderId(System.Int64)">
+            <summary>
+            Retrieve order shipping address
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.Repository.ICustomerRepository">
             <summary>
             Generic Customer Repository Interface
@@ -496,11 +511,37 @@
             <param name="customerId"></param>
             <returns></returns>
         </member>
+        <member name="M:ACM.Business.Repository.ICustomerRepository.RetrieveWithAddresses(System.Int64)">
+            <summary>
+            Method to Retrieve a customer's entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.ICustomerRepository.RetrieveCustomerByOrderId(System.Int64)">
+            <summary>
+            Method to retrieve the order's customer 
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.Repository.IOrderRepository">
             <summary>
             Generic Order Repository Interface
             Should be used for Repository Mocking
             </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.IOrderRepository.RetrieveOrderAddress(System.Int64)">
+            <summary>
+            Retrieve order shipping address
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Repository.IOrderRepository.RetrieveOrderCustomer(System.Int64)">
+            <summary>
+            Method to retrieve the order's customer 
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
         </member>
         <member name="T:ACM.Business.Repository.IProductRepository">
             <summary>
@@ -512,6 +553,32 @@
             <summary>
             Order Data Manager
             </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.OrderRepository.#ctor">
+            <summary>
+            OrderRepository Constructor
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.OrderRepository.#ctor(ACM.Business.Repository.IAddressRepository,ACM.Business.Repository.ICustomerRepository)">
+            <summary>
+            OrderRepository Constructor
+            </summary>
+            <param name="addressRepository"></param>
+            <param name="customerRepository"></param>
+        </member>
+        <member name="M:ACM.Business.Repository.OrderRepository.RetrieveOrderAddress(System.Int64)">
+            <summary>
+            Retrieve order shipping address
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Repository.OrderRepository.RetrieveOrderCustomer(System.Int64)">
+            <summary>
+            Method to retrieve the order's customer 
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
         </member>
         <member name="M:ACM.Business.Repository.OrderRepository.Retrieve(System.Int64)">
             <summary>
@@ -549,6 +616,16 @@
             Order's Entity Save Method
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:ACM.Business.Errors.UnavailableRepositoryException">
+            <summary>
+            Exception throwed when a repository is not available
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Errors.UnavailableRepositoryException.#ctor(System.Type)">
+            <summary>
+            UnavailableRepositoryException constructor
+            </summary>
         </member>
     </members>
 </doc>

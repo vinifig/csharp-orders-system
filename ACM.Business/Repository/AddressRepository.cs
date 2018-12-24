@@ -43,10 +43,12 @@ namespace ACM.Business.Repository
         {
             // Mocking Data - in the future implements the query here
             // Add Tasks into a list - Performance issues
-            IList<Task<Address>> operationsList = new List<Task<Address>>();
-            operationsList.Add(Retrieve(1));
-            operationsList.Add(Retrieve(2));
-            
+            IList<Task<Address>> operationsList = new List<Task<Address>>
+            {
+                Retrieve(1),
+                Retrieve(2)
+            };
+
             IEnumerable<Address> addresses = await Task.WhenAll(operationsList);
             return addresses;
         }
@@ -73,6 +75,16 @@ namespace ACM.Business.Repository
         /// <returns></returns>
         public async Task<IEnumerable<Address>> RetrieveByCustomerId(long customerId)
                 => await Retrieve();
+
+        /// <summary>
+        /// Retrieves order's shipping address
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
+        public async Task<Address> RetrieveByOrderId(long orderId)
+                => await Retrieve(1);
+
+        
 
         #endregion
 

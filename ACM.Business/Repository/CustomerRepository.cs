@@ -51,8 +51,30 @@ namespace ACM.Business.Repository
             return addresses.ToList();
         }
 
-        #region IRetrievable
+        /// <summary>
+        /// Method to Retrieve a customer's entity
+        /// </summary>
+        public async Task<Customer> RetrieveWithAddresses(long customerId)
+        {
+            // Mocking Data - in the future implements the query here
+            Customer customer = await Retrieve(customerId);
+            customer.AddressList = await RetrieveCustomerAddresses(customerId);
+            return customer;
+        }
 
+        /// <summary>
+        /// Retrieves the order's customer 
+        /// </summary>
+        /// <param name="orderId"></param>
+        public async Task<Customer> RetrieveCustomerByOrderId(long orderId)
+        {
+            // Mocking Data - in the future implements the query here
+            Customer customer = await Retrieve(1);
+            return customer;
+        }
+
+        
+        #region IRetrievable
 
 
 
@@ -67,8 +89,7 @@ namespace ACM.Business.Repository
             {
                 FirstName = "John",
                 LastName = "Doe",
-                EmailAddress = "mocked@email.com",
-                AddressList = await RetrieveCustomerAddresses(customerId)
+                EmailAddress = "mocked@email.com"
             };
             return await Task.FromResult(customer);
         }

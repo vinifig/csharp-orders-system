@@ -17,5 +17,17 @@ namespace ACM.Business.Repository
         /// <param name="customerId"></param>
         /// <returns></returns>
         Task<IList<Address>> RetrieveCustomerAddresses(long customerId);
+
+        /// <summary>
+        /// Method to Retrieve a customer's entity
+        /// </summary>
+        Task<Customer> RetrieveWithAddresses(long customerId);
+
+        /// <summary>
+        /// Method to retrieve the order's customer 
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
+        Task<Customer> RetrieveCustomerByOrderId(long orderId);
     }
 }

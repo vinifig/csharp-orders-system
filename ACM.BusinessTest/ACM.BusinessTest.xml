@@ -119,7 +119,7 @@
             Verifies if Customer FullName is Valid
             </summary>
         </member>
-        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.Retrieve_Mocked_ReturnAtLeastOneAddress">
+        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.RetrieveWithAddress_Mocked_ReturnAtLeastOneAddress">
             <summary>
             Verifies if Customer FullName is Valid
             </summary>
@@ -138,6 +138,21 @@
             with a address repository, 
             dont throws an repository unavailable exception
             </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ACM.BusinessTest.RepositoryTest.OrderRepositoryTest">
+            <summary>
+            ACM.Business.Customer Test Class
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.RepositoryTest.OrderRepositoryTest.Retrieve_WithoutARepository_ThrowsUnavailableRepositoryException(System.Boolean,System.Boolean)">
+            <summary>
+            Verifies if a order repository,
+            without any of injected repositories, 
+            throws an repository unavailable exception
+            </summary>
+            <param name="withoutCustomerRepository"></param>
+            <param name="withoutAddressRepository"></param>
             <returns></returns>
         </member>
     </members>

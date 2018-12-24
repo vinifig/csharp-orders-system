@@ -23,7 +23,7 @@ namespace ACM.Business
         /// Order Initializer
         /// </summary>
         /// <param name="orderId"></param>
-        public Order(long orderId)
+        public Order(long orderId) : this ()
         {
             OrderId = orderId;
         }
@@ -56,7 +56,7 @@ namespace ACM.Business
         /// Order Items
         /// </summary>
         [Required]
-        public IEnumerable<OrderItem> Items { get; set; }
+        public IList<OrderItem> Items { get; set; }
 
         /// <summary>
         /// Order Description
@@ -107,7 +107,7 @@ namespace ACM.Business
         /// <returns></returns>
         public override int GetHashCode()
         {
-            return HashCode.Combine(CurrentPrice, OrderId, Customer, ShippingAddress, Items, Details, Date);
+            return HashCode.Combine(CurrentPrice, OrderId, Customer, ShippingAddress, Details, Date);
         }
 
         #endregion
