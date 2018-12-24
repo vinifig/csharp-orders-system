@@ -20,10 +20,35 @@ namespace ACM.Business
         public long? AddressId { get; set; }
 
         /// <summary>
-        /// Address Street
+        /// Address City's Street
         /// </summary>
         [Required]
         public string Street { get; set; }
+
+        /// <summary>
+        /// Address State's City
+        /// </summary>
+        [Required]
+        public string City { get; set; }
+
+        /// <summary>
+        /// Address Country's State
+        /// </summary>
+        [StringLength(2)]
+        [Required]
+        public string State { get; set; }
+
+        /// <summary>
+        /// Address Zip Code
+        /// </summary>
+        public string ZipCode { get; set; }
+
+        /// <summary>
+        /// Address Country
+        /// </summary>
+        [StringLength(3)]
+        [Required]
+        public string Country { get; set; }
 
         #endregion
 

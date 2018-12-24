@@ -8,10 +8,10 @@ namespace ACM.Business
     /// <summary>
     /// Customer's Entity Class
     /// </summary>
-    public class Customer: IValidatable, IRetrievable<Customer>, ISavable<Customer>
+    public class Customer: IValidatable
     {
 
-        #region Customer
+        #region Customer Constructor
 
         /// <summary>
         /// Customer's Entity constructor
@@ -70,39 +70,6 @@ namespace ACM.Business
         #endregion
 
         #region Interfaces
-
-        #region IRetrievable
-
-        /// <summary>
-        /// Method to Retrieve a customer's entity
-        /// </summary>
-        public Customer Retrieve(long entityId)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Method to Retrieve all customer's entities
-        /// </summary>
-        public IEnumerable<Customer> Retrieve()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
-        #region ISavable
-
-        /// <summary>
-        /// Customer's Entity Save Method
-        /// </summary>
-        /// <returns></returns>
-        public Customer Save()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
 
         #region IValidatable
 
