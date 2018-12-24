@@ -8,7 +8,7 @@ namespace ACM.Business
     /// <summary>
     /// Order's Entity class
     /// </summary>
-    public class Order : IValidatable
+    public class Order : IValidatable, IEquatable<Order>
     {
         #region Order Constructor
         /// <summary>
@@ -17,6 +17,15 @@ namespace ACM.Business
         public Order()
         {
             Items = new List<OrderItem>();
+        }
+
+        /// <summary>
+        /// Order Initializer
+        /// </summary>
+        /// <param name="orderId"></param>
+        public Order(long orderId)
+        {
+            OrderId = orderId
         }
 
         #endregion
@@ -77,6 +86,29 @@ namespace ACM.Business
 
 
         #endregion
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Equals comparison
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Order other)
+        {
+            return GetHashCode() == other.GetHashCode();
+        }
+
+        /// <summary>
+        /// HashCode Generator
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(CurrentPrice, OrderId, Customer, ShippingAddress, Items, Details, Date);
+        }
 
         #endregion
     }

@@ -8,7 +8,7 @@ namespace ACM.Business
     /// <summary>
     /// OrderItem's Entity Class
     /// </summary>
-    public class OrderItem : IValidatable
+    public class OrderItem : IValidatable, IEquatable<OrderItem>
     {
 
         #region Properties
@@ -62,5 +62,27 @@ namespace ACM.Business
 
         #endregion
 
+        #region Overrides
+
+        /// <summary>
+        /// Equals comparison
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(OrderItem other)
+        {
+            return GetHashCode() == other.GetHashCode();
+        }
+
+        /// <summary>
+        /// HashCode Generator
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(ItemId, Product, ItemProductPrice, Quantity, SubTotal);
+        }
+
+        #endregion
     }
 }

@@ -109,5 +109,15 @@
             <param name="name"></param>
             <param name="description"></param>
         </member>
+        <member name="T:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest">
+            <summary>
+            ACM.Business.Customer Test Class
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.Retrieve_User">
+            <summary>
+            Verifies if Customer FullName is Valid
+            </summary>
+        </member>
     </members>
 </doc>

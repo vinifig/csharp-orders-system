@@ -8,8 +8,10 @@ namespace ACM.Business
     /// <summary>
     /// Address Entity
     /// </summary>
-    public class Address : IValidatable
+    public class Address : IValidatable, IEquatable<Address>
     {
+        #region Address Constructor
+
         /// <summary>
         /// Address Entity's constructor
         /// </summary>
@@ -17,6 +19,16 @@ namespace ACM.Business
         {
 
         }
+
+        /// <summary>
+        /// Address Entity's constructor
+        /// </summary>
+        public Address(long addressId)
+        {
+            AddressId = addressId;
+        }
+
+        #endregion
 
         #region Properties
 
@@ -77,5 +89,27 @@ namespace ACM.Business
 
         #endregion
 
+        #region Overrides
+
+        /// <summary>
+        /// Instance hashcode generator
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(AddressId, Street, City, State, ZipCode, Country);
+        }
+
+        /// <summary>
+        /// Equals comparison
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Address other)
+        {
+            return GetHashCode() == other.GetHashCode();
+        }
+
+        #endregion
     }
 }

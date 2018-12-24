@@ -8,7 +8,7 @@ namespace ACM.Business
     /// <summary>
     /// Customer's Entity Class
     /// </summary>
-    public class Customer: IValidatable
+    public class Customer: IValidatable, IEquatable<Customer>
     {
 
         #region Customer Constructor
@@ -18,6 +18,15 @@ namespace ACM.Business
         /// </summary>
         public Customer()
         {
+        }
+
+        /// <summary>
+        /// Customer's Entity constructor
+        /// </summary>
+        /// <param name="id"></param>
+        public Customer(long id)
+        {
+            CustomerId = id;
         }
 
         /// <summary>
@@ -93,6 +102,31 @@ namespace ACM.Business
         #endregion
 
         #endregion
-    
+
+        #region Overrides
+
+       
+
+        /// <summary>
+        /// Customer Equals comparison
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(Customer other)
+        {
+            return GetHashCode() == other.GetHashCode();
+        }
+
+        /// <summary>
+        /// GetHashCode override
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(CustomerId, LastName, FirstName, EmailAddress, WorkAddress, HomeAddress, FullName);
+        }
+
+        #endregion
+
     }
 }

@@ -14,6 +14,11 @@
             Address Entity's constructor
             </summary>
         </member>
+        <member name="M:ACM.Business.Address.#ctor(System.Int64)">
+            <summary>
+            Address Entity's constructor
+            </summary>
+        </member>
         <member name="P:ACM.Business.Address.AddressId">
             <summary>
             Address Id
@@ -60,6 +65,12 @@
             Customer's Entity constructor
             </summary>
         </member>
+        <member name="M:ACM.Business.Customer.#ctor(System.Int64)">
+            <summary>
+            Customer's Entity constructor
+            </summary>
+            <param name="id"></param>
+        </member>
         <member name="M:ACM.Business.Customer.#ctor(System.String,System.String,System.String)">
             <summary>
             Customer's Entity constructor
@@ -105,6 +116,19 @@
             Customer Instance Validator
             </summary>
             <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="M:ACM.Business.Customer.Equals(ACM.Business.Customer)">
+            <summary>
+            Customer Equals comparison
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Customer.GetHashCode">
+            <summary>
+            GetHashCode override
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:ACM.Business.IRepository`1">
             <summary>
@@ -298,6 +322,24 @@
             Customer's Entity Save Method
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:ACM.Business.Repository.ICustomerRepository">
+            <summary>
+            Generic Customer Repository Interface
+            Should be used for Repository Mocking
+            </summary>
+        </member>
+        <member name="T:ACM.Business.Repository.IOrderRepository">
+            <summary>
+            Generic Order Repository Interface
+            Should be used for Repository Mocking
+            </summary>
+        </member>
+        <member name="T:ACM.Business.Repository.IProductRepository">
+            <summary>
+            Generic Product Repository Interface
+            Should be used for Repository Mocking
+            </summary>
         </member>
         <member name="T:ACM.Business.Repository.OrderRepository">
             <summary>

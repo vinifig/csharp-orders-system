@@ -22,7 +22,12 @@ namespace ACM.Business.Repository
         public async Task<Customer> Retrieve(long entityId)
         {
             // Mocking Data - in the future implements the query here
-            Customer customer = new Customer();
+            Customer customer = new Customer(entityId)
+            {
+                FirstName = "John",
+                LastName = "Doe",
+                EmailAddress = "mocked@email.com"
+            };
             return await Task.FromResult(customer);
         }
 
