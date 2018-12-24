@@ -9,7 +9,7 @@ namespace ACM.Business.Repository
     /// <summary>
     /// Customer Data Manager
     /// </summary>
-    public class CustomerRepository: IRepository<Customer>
+    public class CustomerRepository: ICustomerRepository
     {
 
         #region Interfaces

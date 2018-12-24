@@ -9,7 +9,7 @@ namespace ACM.Business.Repository
     /// <summary>
     /// Order Data Manager
     /// </summary>
-    public class OrderRepository: IRepository<Order>
+    public class OrderRepository: IOrderRepository
     {
 
         #region Interfaces

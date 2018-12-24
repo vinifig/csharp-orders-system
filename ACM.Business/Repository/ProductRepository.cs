@@ -9,7 +9,7 @@ namespace ACM.Business.Repository
     /// <summary>
     /// Product Data Manager
     /// </summary>
-    public class ProductRepository: IRepository<Product>
+    public class ProductRepository: IProductRepository
     {
 
         #region Interfaces
