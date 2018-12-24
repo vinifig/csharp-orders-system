@@ -114,7 +114,7 @@
             ACM.Business.Customer Test Class
             </summary>
         </member>
-        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.Retrieve_User">
+        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.Retrieve_Mocked_CorrectValue">
             <summary>
             Verifies if Customer FullName is Valid
             </summary>

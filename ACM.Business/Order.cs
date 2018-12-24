@@ -25,7 +25,7 @@ namespace ACM.Business
         /// <param name="orderId"></param>
         public Order(long orderId)
         {
-            OrderId = orderId
+            OrderId = orderId;
         }
 
         #endregion

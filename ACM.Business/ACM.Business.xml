@@ -55,6 +55,19 @@
             </summary>
             <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
         </member>
+        <member name="M:ACM.Business.Address.GetHashCode">
+            <summary>
+            Instance hashcode generator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Address.Equals(ACM.Business.Address)">
+            <summary>
+            Equals comparison
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.Customer">
             <summary>
             Customer's Entity Class
@@ -121,7 +134,7 @@
             <summary>
             Customer Equals comparison
             </summary>
-            <param name="obj"></param>
+            <param name="other"></param>
             <returns></returns>
         </member>
         <member name="M:ACM.Business.Customer.GetHashCode">
@@ -194,6 +207,12 @@
             Order Initializer
             </summary>
         </member>
+        <member name="M:ACM.Business.Order.#ctor(System.Int64)">
+            <summary>
+            Order Initializer
+            </summary>
+            <param name="orderId"></param>
+        </member>
         <member name="P:ACM.Business.Order.CurrentPrice">
             <summary>
             Order's Current Price
@@ -235,6 +254,19 @@
             </summary>
             <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
         </member>
+        <member name="M:ACM.Business.Order.Equals(ACM.Business.Order)">
+            <summary>
+            Equals comparison
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Order.GetHashCode">
+            <summary>
+            HashCode Generator
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.OrderItem">
             <summary>
             OrderItem's Entity Class
@@ -271,6 +303,19 @@
             </summary>
             <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
         </member>
+        <member name="M:ACM.Business.OrderItem.Equals(ACM.Business.OrderItem)">
+            <summary>
+            Equals comparison
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.OrderItem.GetHashCode">
+            <summary>
+            HashCode Generator
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.Product">
             <summary>
             Product's Entity class
@@ -301,6 +346,19 @@
             Implementation of IValidatable.Validate()
             </summary>
             <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException"></exception>
+        </member>
+        <member name="M:ACM.Business.Product.Equals(ACM.Business.Product)">
+            <summary>
+            Equals comparison
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Product.GetHashCode">
+            <summary>
+            HashCode Generator
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:ACM.Business.Repository.CustomerRepository">
             <summary>

@@ -16,7 +16,7 @@ namespace ACM.BusinessTest.RepositoryTest
         /// Verifies if Customer FullName is Valid
         /// </summary>
         [Fact]
-        public async Task Retrieve_User()
+        public async Task Retrieve_Mocked_CorrectValue()
         {
             // Arrange
             ICustomerRepository customerRepository = new CustomerRepository();

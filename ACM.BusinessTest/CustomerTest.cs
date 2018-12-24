@@ -39,7 +39,12 @@ namespace ACM.BusinessTest
         public void FirstName_Change_UpdatesValidFullName(string firstName, string lastName, string newFirstName)
         {
             // Arrange
-            Customer customer = new Customer(firstName, lastName, "john@doe.com");
+            Customer customer = new Customer(1)
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                EmailAddress = "john@doe.com"
+            };
 
             // Act
             customer.FirstName = newFirstName;
