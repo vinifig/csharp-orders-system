@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 namespace ACM.Business.Repository
 {
     /// <summary>
-    /// Generic Customer Repository Interface
+    /// Generic Address Repository Interface
     /// Should be used for Repository Mocking
     /// </summary>
-    public interface ICustomerRepository: IRepository<Customer>
+    public interface IAddressRepository: IRepository<Address>
     {
         /// <summary>
         /// Retrieve customer addresses list
         /// </summary>
         /// <param name="customerId"></param>
         /// <returns></returns>
-        Task<IList<Address>> RetrieveCustomerAddresses(long customerId);
+        Task<IEnumerable<Address>> RetrieveByCustomerId(long customerId);
     }
 }

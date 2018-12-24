@@ -18,13 +18,15 @@ namespace ACM.Business
         /// </summary>
         public Customer()
         {
+            AddressList = new List<Address>();
+            Type = CustomerType.Unknown;
         }
 
         /// <summary>
         /// Customer's Entity constructor
         /// </summary>
         /// <param name="id"></param>
-        public Customer(long id)
+        public Customer(long id) : this()
         {
             CustomerId = id;
         }
@@ -32,7 +34,7 @@ namespace ACM.Business
         /// <summary>
         /// Customer's Entity constructor
         /// </summary>
-        public Customer(string firstName, string lastName, [EmailAddress] string email)
+        public Customer(string firstName, string lastName, [EmailAddress] string email): this()
         {
             FirstName = firstName;
             LastName = lastName;
@@ -47,6 +49,11 @@ namespace ACM.Business
         /// Customer's System ID
         /// </summary>
         public long CustomerId { get; private set; }
+
+        /// <summary>
+        /// Type of Customer 
+        /// </summary>
+        public CustomerType Type { get; private set; }
 
         /// <summary>
         /// Customer's Last Name Property
@@ -66,17 +73,11 @@ namespace ACM.Business
         [Required]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string EmailAddress { get; set; }
-        
+
         /// <summary>
         /// Customer's Work Address
         /// </summary>
-        public Address WorkAddress { get; set; }
-
-        /// <summary>
-        /// Customer's Home Address
-        /// </summary>
-        [Required]
-        public Address HomeAddress { get; set; }
+        public IList<Address> AddressList { get; set; }
 
         /// <summary>
         /// Customer's Full Name Getter
@@ -123,7 +124,7 @@ namespace ACM.Business
         /// <returns></returns>
         public override int GetHashCode()
         {
-            return HashCode.Combine(CustomerId, LastName, FirstName, EmailAddress, WorkAddress, HomeAddress, FullName);
+            return HashCode.Combine(CustomerId, LastName, FirstName, EmailAddress, FullName);
         }
 
         #endregion

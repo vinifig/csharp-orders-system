@@ -24,6 +24,11 @@
             Address Id
             </summary>
         </member>
+        <member name="P:ACM.Business.Address.Type">
+            <summary>
+            Type of Address
+            </summary>
+        </member>
         <member name="P:ACM.Business.Address.Street">
             <summary>
             Address City's Street
@@ -94,6 +99,11 @@
             Customer's System ID
             </summary>
         </member>
+        <member name="P:ACM.Business.Customer.Type">
+            <summary>
+            Type of Customer 
+            </summary>
+        </member>
         <member name="P:ACM.Business.Customer.LastName">
             <summary>
             Customer's Last Name Property
@@ -109,14 +119,9 @@
             Customer's Email Property
             </summary>
         </member>
-        <member name="P:ACM.Business.Customer.WorkAddress">
+        <member name="P:ACM.Business.Customer.AddressList">
             <summary>
             Customer's Work Address
-            </summary>
-        </member>
-        <member name="P:ACM.Business.Customer.HomeAddress">
-            <summary>
-            Customer's Home Address
             </summary>
         </member>
         <member name="P:ACM.Business.Customer.FullName">
@@ -142,6 +147,46 @@
             GetHashCode override
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:ACM.Business.CustomerType">
+            <summary>
+            Type of Customer Enum
+            </summary>
+        </member>
+        <member name="F:ACM.Business.CustomerType.Unknown">
+            <summary>
+            Unknown types
+            </summary>
+        </member>
+        <member name="F:ACM.Business.CustomerType.Business">
+            <summary>
+             Business Customers
+            </summary>
+        </member>
+        <member name="F:ACM.Business.CustomerType.Residential">
+            <summary>
+            Retail Customers
+            </summary>
+        </member>
+        <member name="F:ACM.Business.CustomerType.Government">
+            <summary>
+            Governamental Customers
+            </summary>
+        </member>
+        <member name="F:ACM.Business.CustomerType.Education">
+            <summary>
+            Professors and Education related customers 
+            </summary>
+        </member>
+        <member name="T:ACM.Business.Errors.UnavailableRepositoryException">
+            <summary>
+            Exception throwed when a repository is not available
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Errors.UnavailableRepositoryException.#ctor(System.Type)">
+            <summary>
+            UnavailableRepositoryException constructor
+            </summary>
         </member>
         <member name="T:ACM.Business.IRepository`1">
             <summary>
@@ -360,10 +405,54 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:ACM.Business.Repository.AddressRepository">
+            <summary>
+            Generic Address Repository Interface
+            Should be used for Repository Mocking
+            </summary>
+            <summary>
+            Address Data Manager
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.AddressRepository.Retrieve(System.Int64)">
+            <summary>
+            Method to Retrieve a Address's entity
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.AddressRepository.Retrieve">
+            <summary>
+            Method to Retrieve all Address's entities
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.AddressRepository.Save(ACM.Business.Address)">
+            <summary>
+            Address's Entity Save Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.Business.Repository.AddressRepository.RetrieveByCustomerId(System.Int64)">
+            <summary>
+            Retrieves all customer's addresses
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.Repository.CustomerRepository">
             <summary>
             Customer Data Manager
             </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.CustomerRepository.#ctor(ACM.Business.Repository.IAddressRepository)">
+            <summary>
+            CustomerRepository Constructor
+            </summary>
+            <param name="addressRepository"></param>
+        </member>
+        <member name="M:ACM.Business.Repository.CustomerRepository.RetrieveCustomerAddresses(System.Int64)">
+            <summary>
+            Retrieve all addresses of a customer
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:ACM.Business.Repository.CustomerRepository.Retrieve(System.Int64)">
             <summary>
@@ -381,11 +470,31 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:ACM.Business.Repository.IAddressRepository">
+            <summary>
+            Generic Address Repository Interface
+            Should be used for Repository Mocking
+            </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.IAddressRepository.RetrieveByCustomerId(System.Int64)">
+            <summary>
+            Retrieve customer addresses list
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
         <member name="T:ACM.Business.Repository.ICustomerRepository">
             <summary>
             Generic Customer Repository Interface
             Should be used for Repository Mocking
             </summary>
+        </member>
+        <member name="M:ACM.Business.Repository.ICustomerRepository.RetrieveCustomerAddresses(System.Int64)">
+            <summary>
+            Retrieve customer addresses list
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
         </member>
         <member name="T:ACM.Business.Repository.IOrderRepository">
             <summary>

@@ -119,5 +119,26 @@
             Verifies if Customer FullName is Valid
             </summary>
         </member>
+        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.Retrieve_Mocked_ReturnAtLeastOneAddress">
+            <summary>
+            Verifies if Customer FullName is Valid
+            </summary>
+        </member>
+        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.RetrieveCustomerAddress_WithoutAddressRepository_ThrowsUnavailableRepositoryException">
+            <summary>
+            Verifies if a customer repository,
+            without a address repository, 
+            throws an repository unavailable exception
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ACM.BusinessTest.RepositoryTest.CustomerRepositoryTest.RetrieveCustomerAddress_WithAddressRepository_DontThrowsUnavailableRepositoryException">
+            <summary>
+            Verifies if a customer repository,
+            with a address repository, 
+            dont throws an repository unavailable exception
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

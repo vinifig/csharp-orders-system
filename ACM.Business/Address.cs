@@ -38,6 +38,11 @@ namespace ACM.Business
         public long? AddressId { get; set; }
 
         /// <summary>
+        /// Type of Address
+        /// </summary>
+        public string Type { get; set; }
+
+        /// <summary>
         /// Address City's Street
         /// </summary>
         [Required]

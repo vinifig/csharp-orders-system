@@ -3,13 +3,9 @@
   <Class Name="ACM.Business.Customer">
     <Position X="9.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAEAAAACAAIAAgAAAAAAAAAAAAJAAAQAAAgAAAAg=</HashCode>
+      <HashCode>AAAAQEAAAACAAIAAgAAAAAAAAAAAAJAAAQAAAgAAAAg=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="WorkAddress" />
-      <Property Name="HomeAddress" />
-    </ShowAsAssociation>
     <Lollipop Position="0.122" />
   </Class>
   <Class Name="ACM.Business.Product">
@@ -23,7 +19,7 @@
   <Class Name="ACM.Business.Address">
     <Position X="12.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAACAAAAIgAAAAAAAAAIAAIABAAIABAAAAAA=</HashCode>
+      <HashCode>QAAAAAAAAACAAAAIgAAAAAAAAAIAAIABAQIABAAAAAA=</HashCode>
       <FileName>Address.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -39,11 +35,12 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ACM.Business.Repository.CustomerRepository" BaseTypeListCollapsed="true">
+  <Class Name="ACM.Business.Repository.AddressRepository" BaseTypeListCollapsed="true">
     <Position X="8" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Repository\CustomerRepository.cs</FileName>
+      <HashCode>AIAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\AddressRepository.cs</FileName>
+      <NewMemberFileName>Repository\CustomerRepository.cs</NewMemberFileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -127,11 +124,12 @@
       <FileName>Repository\ICustomerRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ACM.Business.Repository.IOrderRepository" Collapsed="true">
+  <Interface Name="ACM.Business.Repository.IAddressRepository" Collapsed="true">
     <Position X="5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Repository\IOrderRepository.cs</FileName>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\IAddressRepository.cs</FileName>
+      <NewMemberFileName>Repository\AddressRepository.cs</NewMemberFileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ACM.Business.Repository.IProductRepository" Collapsed="true">
